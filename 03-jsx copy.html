@@ -1,0 +1,22 @@
+<body> 
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const rootElem = document.getElementById("root")
+    const children  = "whats up "   //children name variable is neccessary to put the contents in div
+    const className = "container"
+    const props = {children , className}
+    // const newElem = <div className={className}>{content}</div>
+    const newElem = <div {...props} />
+    
+    // const newElem = React.createElement("div",{
+    //   children : "hi guys",
+    //   className : "container"
+    // })
+    ReactDOM.render(newElem,rootElem )
+  </script>
+
+</body>
